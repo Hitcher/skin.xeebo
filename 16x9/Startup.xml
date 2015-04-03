@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_1_Button,ActivateWindowAndFocus(skinsettings, 9100,1, 26,1))</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_1_Label,$LOCALIZE[31010])</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_2_Button,ActivateWindowAndFocus(skinsettings, 9100,1, 28,1))</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_2_Label,$LOCALIZE[31010])</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_3_Button,ActivateWindowAndFocus(skinsettings, 9100,1, 30,1))</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_3_Label,$LOCALIZE[31010])</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_4_Button,ActivateWindowAndFocus(skinsettings, 9100,1, 32,1))</onload>
+	<onload condition="IsEmpty(Skin.String(Home_List_1))">Skin.SetString(Home_List_4_Label,$LOCALIZE[31010])</onload>
+	<onload>RunScript(script.tv.show.next.aired,silent=True)</onload>
+	<onload condition="!IsEmpty(Skin.String(Startup_Playlist))">PlayMedia($INFO[Skin.String(Startup_Playlist)])</onload>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+</window>

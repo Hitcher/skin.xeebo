@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">300</defaultcontrol>
+	<include>Window_OpenClose_Animation</include>
+	<controls>
+		<include>Dialog_Popup_Background</include>
+		<control type="group">
+			<include>Dialog_Popup_Animation</include>
+			<control type="group">
+				<left>183</left>
+				<top>180</top>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1554</width>
+					<height>858</height>
+					<texture>keyboard/keyboard_oneline_background.png</texture>
+				</control>
+				<control type="label" id="311">
+					<description>heading label</description>
+					<left>40</left>
+					<top>15</top>
+					<width>1467</width>
+					<height>28</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>light34</font>
+					<label>-</label>
+					<textcolor>green</textcolor>
+					<scroll>true</scroll>
+					<visible>!Window.IsVisible(numericinput)</visible>
+				</control>
+				<control type="image">
+					<description>input field image</description>
+					<left>40</left>
+					<top>105</top>
+					<height>90</height>
+					<width>1467</width>
+					<texture border="18">keyboard/keyboard_input_field_on.png</texture>
+					<visible>!Window.IsVisible(numericinput)</visible>
+				</control>
+				<control type="edit" id="312">
+					<description>Edit Text</description>
+					<left>40</left>
+					<top>110</top>
+					<width>1567</width>
+					<height>64</height>
+					<font>font30</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>black</textcolor>
+				</control>
+				<control type="group">
+					<left>22</left>
+					<top>225</top>
+					<control type="grouplist">
+						<top>18</top>
+						<itemgap>12</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="button" id="309">
+							<description>Layout button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<label>20177</label>
+							<onup>noop</onup>
+							<ondown>302</ondown>
+							<textoffsetx>10</textoffsetx>
+							<texturenofocus>keyboard/keyboard_ip_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_ip_on.png</texturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+						</control>
+						<control type="button" id="100">
+							<description>(0,0) key button</description>
+							<onup>noop</onup>
+							<ondown>120</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="101">
+							<description>(0,1) key button</description>
+							<onup>noop</onup>
+							<ondown>121</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="102">
+							<description>(0,2) key button</description>
+							<onup>noop</onup>
+							<ondown>122</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="103">
+							<description>(0,3) key button</description>
+							<onup>noop</onup>
+							<ondown>123</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="104">
+							<description>(0,4) key button</description>
+							<onup>noop</onup>
+							<ondown>124</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="105">
+							<description>(0,5) key button</description>
+							<onup>noop</onup>
+							<ondown>125</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="106">
+							<description>(0,6) key button</description>
+							<onup>noop</onup>
+							<ondown>126</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="107">
+							<description>(0,7) key button</description>
+							<onup>noop</onup>
+							<ondown>127</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="108">
+							<description>(0,8) key button</description>
+							<onup>noop</onup>
+							<ondown>128</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="109">
+							<description>(0,9) key button</description>
+							<onup>noop</onup>
+							<ondown>129</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="110">
+							<description>(0,10) key button</description>
+							<onup>noop</onup>
+							<ondown>130</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="111">
+							<description>(0,11) key button</description>
+							<onup>noop</onup>
+							<ondown>131</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+					</control>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<top>120</top>
+						<itemgap>12</itemgap>
+						<control type="togglebutton" id="302">
+							<description>SHIFT button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<label>20178</label>
+							<onup>309</onup>
+							<ondown>303</ondown>
+							<textoffsetx>0</textoffsetx>
+							<texturenofocus>keyboard/keyboard_shift_alt_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_shift_alt_on.png</texturefocus>
+							<alttexturenofocus>keyboard/keyboard_shift.png</alttexturenofocus>
+							<alttexturefocus>keyboard/keyboard_shift_on.png</alttexturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+						</control>
+						<control type="button" id="120">
+							<description>(1,0) key button</description>
+							<onup>100</onup>
+							<ondown>140</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="121">
+							<description>(1,1) key button</description>
+							<onup>101</onup>
+							<ondown>141</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="122">
+							<description>(1,2) key button</description>
+							<onup>102</onup>
+							<ondown>142</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="123">
+							<description>(1,3) key button</description>
+							<onup>103</onup>
+							<ondown>143</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="124">
+							<description>(1,4) key button</description>
+							<onup>104</onup>
+							<ondown>144</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="125">
+							<description>(1,5) key button</description>
+							<onup>105</onup>
+							<ondown>145</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="126">
+							<description>(1,6) key button</description>
+							<onup>106</onup>
+							<ondown>146</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="127">
+							<description>(1,7) key button</description>
+							<onup>107</onup>
+							<ondown>147</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="128">
+							<description>(1,8) key button</description>
+							<onup>108</onup>
+							<ondown>148</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="129">
+							<description>(1,9) key button</description>
+							<onup>109</onup>
+							<ondown>149</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="130">
+							<description>(1,10) key button</description>
+							<onup>110</onup>
+							<ondown>150</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="131">
+							<description>(1,11) key button</description>
+							<onup>111</onup>
+							<ondown>151</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+					</control>
+					<control type="grouplist">
+						<top>222</top>
+						<orientation>horizontal</orientation>
+						<itemgap>12</itemgap>
+						<control type="togglebutton" id="303">
+							<description>CAPS LOCK button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<label>20179</label>
+							<onup>302</onup>
+							<ondown>304</ondown>
+							<textoffsetx>0</textoffsetx>
+							<texturenofocus>keyboard/keyboard_shift_alt_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_shift_alt_on.png</texturefocus>
+							<alttexturenofocus>keyboard/keyboard_shift.png</alttexturenofocus>
+							<alttexturefocus>keyboard/keyboard_shift_on.png</alttexturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+						</control>
+						<control type="button" id="140">
+							<description>(2,0) key button</description>
+							<onup>120</onup>
+							<ondown>160</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="141">
+							<description>(2,1) key button</description>
+							<onup>121</onup>
+							<ondown>161</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="142">
+							<description>(2,2) key button</description>
+							<onup>122</onup>
+							<ondown>162</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="143">
+							<description>(2,3) key button</description>
+							<onup>123</onup>
+							<ondown>163</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="144">
+							<description>(2,4) key button</description>
+							<onup>124</onup>
+							<ondown>164</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="145">
+							<description>(2,5) key button</description>
+							<onup>125</onup>
+							<ondown>165</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="146">
+							<description>(2,6) key button</description>
+							<onup>126</onup>
+							<ondown>166</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="147">
+							<description>(2,7) key button</description>
+							<onup>127</onup>
+							<ondown>167</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="148">
+							<description>(2,8) key button</description>
+							<onup>128</onup>
+							<ondown>168</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="149">
+							<description>(2,9) key button</description>
+							<onup>129</onup>
+							<ondown>169</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="150">
+							<description>(2,10) key button</description>
+							<onup>130</onup>
+							<ondown>170</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="151">
+							<description>(2,11) key button</description>
+							<onup>131</onup>
+							<ondown>171</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+					</control>
+					<control type="grouplist">
+						<top>324</top>
+						<itemgap>12</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="togglebutton" id="304">
+							<description>Symbols button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<label>20180</label>
+							<onup>303</onup>
+							<ondown>307</ondown>
+							<textoffsetx>0</textoffsetx>
+							<texturenofocus>keyboard/keyboard_shift_alt_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_shift_alt_on.png</texturefocus>
+							<alttexturenofocus>keyboard/keyboard_shift.png</alttexturenofocus>
+							<alttexturefocus>keyboard/keyboard_shift_on.png</alttexturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+						</control>
+						<control type="button" id="160">
+							<description>(3,0) key button</description>
+							<onup>140</onup>
+							<ondown>32</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="161">
+							<description>(3,1) key button</description>
+							<onup>141</onup>
+							<ondown>32</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="162">
+							<description>(3,2) key button</description>
+							<onup>142</onup>
+							<ondown>32</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="163">
+							<description>(3,3) key button</description>
+							<onup>143</onup>
+							<ondown>32</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="164">
+							<description>(3,4) key button</description>
+							<onup>144</onup>
+							<ondown>8</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="165">
+							<description>(3,5) key button</description>
+							<onup>145</onup>
+							<ondown>8</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="166">
+							<description>(3,6) key button</description>
+							<onup>146</onup>
+							<ondown>8</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="167">
+							<description>(3,7) key button</description>
+							<onup>147</onup>
+							<ondown>8</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="168">
+							<description>(3,8) key button</description>
+							<onup>148</onup>
+							<ondown>305</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="169">
+							<description>(3,9) key button</description>
+							<onup>149</onup>
+							<ondown>305</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="170">
+							<description>(3,10) key button</description>
+							<onup>150</onup>
+							<ondown>306</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+						<control type="button" id="171">
+							<description>(3,11) key button</description>
+							<onup>151</onup>
+							<ondown>306</ondown>
+							<include>Common_Keyboard_Button</include>
+						</control>
+					</control>
+					<control type="grouplist">
+						<top>426</top>
+						<itemgap>12</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="button" id="307">
+							<description>IP Input button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<onup>304</onup>
+							<ondown>300</ondown>
+							<label>1006</label>
+							<textoffsetx>0</textoffsetx>
+							<texturenofocus>keyboard/keyboard_ip_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_ip_on.png</texturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+						</control>
+						<control type="button" id="32">
+							<description>SPACE button</description>
+							<animation effect="zoom" end="0,0,405,99" center="auto" time="60">Focus</animation>
+							<width>396</width>
+							<height>90</height>
+							<texturenofocus>keyboard/keyboard_space.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_space_on.png</texturefocus>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+							<label>$LOCALIZE[20182]</label>
+							<onup>161</onup>
+							<ondown>300</ondown>
+						</control>
+						<control type="button" id="8">
+							<description>BACKSPACE button</description>
+							<animation effect="zoom" end="0,0,303,99" center="auto" time="60">Focus</animation>
+							<width>294</width>
+							<height>90</height>
+							<label>20181</label>
+							<onup>165</onup>
+							<ondown>300</ondown>
+							<texturenofocus>keyboard/keyboard_ip_off.png</texturenofocus>
+							<texturefocus>keyboard/keyboard_ip_on.png</texturefocus>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font23b</font>
+							<label>$LOCALIZE[31072]</label>
+							<textcolor>white</textcolor>
+							<focusedcolor>black</focusedcolor>
+						</control>
+						<control type="button" id="305">
+							<description>previous button</description>
+							<label>&lt;</label>
+							<include>Common_Keyboard_Button</include>
+							<onup>168</onup>
+							<ondown>300</ondown>
+						</control>
+						<control type="button" id="306">
+							<description>next button</description>
+							<label>&gt;</label>
+							<include>Common_Keyboard_Button</include>
+							<onup>170</onup>
+							<ondown>300</ondown>
+						</control>
+					</control>
+				</control>
+				<control type="grouplist" id="330">
+					<left>42</left>
+					<top>774</top>
+					<width>750</width>
+					<height>50</height>
+					<onup>32</onup>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="301">
+						<description>Cancel Button</description>
+						<width>50</width>
+						<height>50</height>
+						<texturefocus>icons/icon_cancel_on.png</texturefocus>
+						<texturenofocus>icons/icon_cancel.png</texturenofocus>
+						<font>-</font>
+						<onleft>noop</onleft>
+						<hitrect x="0" y="0" w="150" h="50" />
+					</control>
+					<control type="label" id="20">
+						<visible>!Control.HasFocus(301)</visible>
+						<width min="0" max="300">auto</width>
+						<height>50</height>
+						<label>222</label>
+						<font>font23</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label" id="21">
+						<visible>Control.HasFocus(301)</visible>
+						<width min="0" max="300">auto</width>
+						<height>50</height>
+						<label>222</label>
+						<font>font23</font>
+						<textcolor>green</textcolor>
+					</control>
+					<control type="label" id="22">
+						<width>6</width>
+						<height>50</height>
+					</control>
+					<control type="button" id="300">
+						<description>OK Button</description>
+						<width>50</width>
+						<height>50</height>
+						<texturefocus>icons/icon_ok_on.png</texturefocus>
+						<texturenofocus>icons/icon_ok.png</texturenofocus>
+						<font>-</font>
+						<onright>noop</onright>
+						<hitrect x="0" y="0" w="150" h="50" />
+					</control>
+					<control type="label" id="23">
+						<visible>!Control.HasFocus(300)</visible>
+						<width min="0" max="300">auto</width>
+						<height>50</height>
+						<label>186</label>
+						<font>font23</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label" id="24">
+						<visible>Control.HasFocus(300)</visible>
+						<width min="0" max="300">auto</width>
+						<height>50</height>
+						<label>186</label>
+						<font>font23</font>
+						<textcolor>green</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
